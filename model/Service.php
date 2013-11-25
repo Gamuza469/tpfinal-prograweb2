@@ -2,19 +2,19 @@
 
 	class Service {
 		private $codigoService;
-		private $cuit;
 
 		private $equipo;
 		private $problema;
 		private $diagnostico;
 		private $solucion;
+		private $fechaDeEntrada;
 
-		public function __construct ($cuit, $equipo, $problema, $diagnostico, $solucion) {
-			$this->cuit = $cuit;
+		public function __construct ($equipo, $problema, $diagnostico, $solucion, $fechaDeEntrada) {
 			$this->equipo = $equipo;
 			$this->problema = $problema;
 			$this->diagnostico = $diagnostico;
 			$this->solucion = $solucion;
+			$this->fechaDeEntrada = $fechaDeEntrada;
 		}
 
 		public function getCodigoService () {
@@ -22,13 +22,6 @@
 		}
 		public function setCodigoService ($codigoService) {
 			$this->codigoService = $codigoService;
-		}
-
-		public function getCuit () {
-			return $this->cuit;
-		}
-		public function setCuit ($cuit) {
-			$this->cuit = $cuit;
 		}
 
 		public function getEquipo () {
@@ -57,6 +50,13 @@
 		}
 		public function setSolucion ($solucion) {
 			$this->solucion = $solucion;
+		}
+
+		public function getFechaDeEntrada () {
+			return $this->fechaDeEntrada;
+		}
+		public function setFechaDeEntrada ($fechaDeEntrada) {
+			$this->fechaDeEntrada = $fechaDeEntrada;
 		}
 	}
 

@@ -9,6 +9,9 @@
 		private $domicilio;
 		private $telefono;
 
+		private $listaDeServices;
+		private $listaDeFacturas;
+
 		public function __construct ($cuit, $nombre, $telefono, $apellido, $domicilio, $eMail) {
 			$this->cuit = $cuit;
 			$this->nombre = $nombre;
@@ -16,6 +19,9 @@
 			$this->eMail = $eMail;
 			$this->domicilio = $domicilio;
 			$this->telefono = $telefono;
+
+			$this->listaDeServices = array();
+			$this->listaDeFacturas = array();
 		}
 
 		public function getCuit () {
@@ -58,6 +64,20 @@
 		}
 		public function setTelefono ($telefono) {
 			$this->telefono = $telefono;
+		}
+
+		public function getListaDeServices () {
+			return $this->listaDeServices;
+		}
+		public function setListaDeServices ($listaDeServices) {
+			$this->listaDeServices = $listaDeServices;
+		}
+
+		public function getListaDeFacturas () {
+			return $this->listaDeFacturas;
+		}
+		public function setListaDeFacturas ($listaDeFacturas) {
+			$this->listaDeFacturas = $listaDeFacturas;
 		}
 	}
 ?>

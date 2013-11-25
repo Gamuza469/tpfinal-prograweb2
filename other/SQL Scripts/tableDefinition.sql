@@ -58,6 +58,7 @@ CREATE TABLE service (
 	problema VARCHAR(255) NOT NULL,
 	diagnostico VARCHAR(255),
 	solucion VARCHAR(255),
+	fechaDeEntrada DATE,
 	PRIMARY KEY (`codigoService`),
 	FOREIGN KEY (`cuit`) REFERENCES `cliente` (`cuit`)
 		ON UPDATE CASCADE

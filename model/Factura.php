@@ -4,13 +4,11 @@
 
 	class Factura {
 		private $numeroFactura;
-		private $cuit;
 
 		private $movimientosFactura;
 
-		public function __construct ($cuit) {
-			$this->cuit = $cuit;
-			$this->movimientosFactura = new MovimientoFactura();
+		public function __construct () {
+			$this->movimientosFactura = array();
 		}
 
 		public function getNumeroFactura () {
@@ -18,13 +16,6 @@
 		}
 		public function setNumeroFactura ($numeroFactura) {
 			$this->numeroFactura = $numeroFactura;
-		}
-
-		public function getCuit () {
-			return $this->cuit;
-		}
-		public function setCuit ($cuit) {
-			$this->cuit = $cuit;
 		}
 	}
 
